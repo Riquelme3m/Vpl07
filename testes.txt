@@ -102,7 +102,7 @@ int main(){
     id6=dado1.at(0).at(15);
     
     res1=entrada1[id1]+entrada1[id2]+entrada1[id3]+entrada1[id4]+entrada1[id5]+entrada1[id6];
-    cout<<res1<<endl;
+    //cout<<res1<<endl;
 
    
     string i1;
@@ -119,7 +119,7 @@ int main(){
     i6=dado1.at(1).at(15);
     
     res2=entrada2[i1]+entrada2[i2]+entrada2[i3]+entrada2[i4]+entrada2[i5]+entrada2[i6];
-    cout<<res2<<endl;
+   // cout<<res2<<endl;
 //ja tenho minhas duas strings para comparar , res1 e res 2
 string senhadescoberta;
 string mm,nn,bb,cc,dd,kk;

@@ -4,11 +4,25 @@ using namespace std;
 
 
  void Intruso::set_senha_vazada(std::string vazou){
-     dado1.push_back(vazou);
+   string recebe;
+    for(int i=0;i<vazou.size();i+=2){
+         recebe+=vazou.at(i);     
+     }
+     //std::cout<<recebe<<std::endl;
+     dado1.push_back(recebe);
+
+     
  }
 
  std::string Intruso::crack_senha(){
     
+    if(dado1.at(0)==dado1.at(1)){
+        dado1.erase(dado1.begin()+1);
+    }
+    else if(dado1.size()==3){
+        dado1.erase(dado1.begin()+2);
+    }
+
     string x;
     string y;
     x=dado1.at(0).at(0);
@@ -152,7 +166,8 @@ if(res1[10]==res2[10]||res1[10]==res2[11]){
 
     }
 
-senhadescoberta=mm+nn+bb+cc+dd+kk;
+string espaco=" ";
+senhadescoberta=mm+espaco+nn+espaco+bb+espaco+cc+espaco+dd+espaco+kk;
 return senhadescoberta;
     
 
